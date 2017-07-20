@@ -2,13 +2,13 @@ package scheduler.assignment;
 
 import java.util.Scanner;
 
-import POJO.Day;
-import POJO.Game;
-import POJO.Player;
-import Repo.DayRepo;
-import Repo.GameRepo;
-import Repo.PlayerRepo;
-import Service.SchedulerService;
+import pojo.Day;
+import pojo.Game;
+import pojo.Player;
+import repo.DayRepo;
+import repo.GameRepo;
+import repo.PlayerRepo;
+import service.SchedulerService;
 
 public class Main {
 
