@@ -86,11 +86,11 @@ public class Main {
 		Game game4 = new Game("Soccer", 11);
 		Game game5 = new Game("Rugby", 4);
 		
-		String gameResult1 = ss.createGame(game1);
-		String gameResult2 = ss.createGame(game2);
-		String gameResult3 = ss.createGame(game3);
-		String gameResult4 = ss.createGame(game4);
-		String gameResult5 = ss.createGame(game5);
+		ss.createGame(game1);
+		ss.createGame(game2);
+	    ss.createGame(game3);
+		ss.createGame(game4);
+		ss.createGame(game5);
 		
 		
 		//Set Up Players
@@ -105,11 +105,11 @@ public class Main {
 		Game[] player5Games = {game2, game4};
 		Player player5 = new Player("Peiyi", player5Games);
 		
-		String playerResult1 = ss.createPlayer(player1);
-		String playerResult2 = ss.createPlayer(player2);
-		String playerResult3 = ss.createPlayer(player3);
-		String playerResult4 = ss.createPlayer(player4);
-		String playerResult5 = ss.createPlayer(player5);
+		ss.createPlayer(player1);
+		ss.createPlayer(player2);
+		ss.createPlayer(player3);
+		ss.createPlayer(player4);
+		ss.createPlayer(player5);
 		
 		
 		//Set Up Days
@@ -124,11 +124,11 @@ public class Main {
 		Game[] day5Games = {game2, game4};
 		Day day5 = new Day("Day5", day5Games);
 		
-		String dayResult1 = ss.createDay(day1);
-		String dayResult2 = ss.createDay(day2);
-		String dayResult3 = ss.createDay(day3);
-		String dayResult4 = ss.createDay(day4);
-		String dayResult5 = ss.createDay(day5);
+		ss.createDay(day1);
+		ss.createDay(day2);
+		ss.createDay(day3);
+		ss.createDay(day4);
+		ss.createDay(day5);
 		
 		
 	}
