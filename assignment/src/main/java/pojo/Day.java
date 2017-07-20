@@ -9,10 +9,14 @@ public class Day {
 		this.games = games;
 	}
 	
-	public Day() {
-		
-	}
 	
+	
+	public Day() {
+		super();
+	}
+
+
+
 	public String getName() {
 		return name;
 	}

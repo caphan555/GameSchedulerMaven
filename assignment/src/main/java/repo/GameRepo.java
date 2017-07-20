@@ -5,15 +5,13 @@ import pojo.Game;
 public class GameRepo implements IGameRepo {
 	private Game[] games;
 
-	public GameRepo() {
-	}
+	
 
 	public GameRepo(Game[] games) {
 		this.games = games;
 	}
 
 	public String save(Game g) {
-		Game[] games = this.getGames();
 		int gameSize = games.length;
 
 		if (games[--gameSize] != null) {

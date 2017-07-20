@@ -6,15 +6,12 @@ import pojo.Player;
 public class PlayerRepo implements IPlayerRepo {
 	private Player[] players;
 	
-	public PlayerRepo() {
-	}
 	
 	public PlayerRepo(Player[] players) {
 		this.players = players;
 	}
 
 	public String save(Player p) {
-		Player[] players = this.getPlayers();
 		int playerSize = players.length;
 
 		if (players[--playerSize] != null) {

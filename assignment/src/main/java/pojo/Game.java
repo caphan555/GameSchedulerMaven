@@ -9,10 +9,14 @@ public class Game {
 		this.noOfPlayers = noOfPlayers;
 	}
 
-	public Game() {
-		
-	}
+
 	
+	public Game() {
+		super();
+	}
+
+
+
 	public String getName() {
 		return name;
 	}

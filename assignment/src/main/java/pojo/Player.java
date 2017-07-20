@@ -10,8 +10,9 @@ public class Player {
 	}
 
 	public Player() {
-		
+		super();
 	}
+	
 	
 	public String getName() {
 		return name;

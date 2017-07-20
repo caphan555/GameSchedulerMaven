@@ -6,15 +6,13 @@ import pojo.Game;
 public class DayRepo implements IDayRepo {
 	private Day[] days;
 	
-	public DayRepo() {
-	}
+	
 	
 	public DayRepo(Day[] days) {
 		this.days = days;
 	}
 
 	public String save(Day d) {
-		Day[] days = this.getDays();
 		int daySize = days.length;
 
 		if (days[--daySize] != null) {
