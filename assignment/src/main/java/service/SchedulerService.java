@@ -11,7 +11,7 @@ public class SchedulerService implements ISchedulerService {
 	private GameRepo gameRepo;
 	private PlayerRepo playerRepo;
 	private DayRepo dayRepo;
-	public static final String FAILURE = "failure";
+	public static final String failure = "failure";
 
 	public SchedulerService() {
 	}
@@ -34,7 +34,7 @@ public class SchedulerService implements ISchedulerService {
 		if (!(game.getName().equals("repeat"))) {
 			return gameRepo.save(g);
 		} else {
-			return FAILURE;
+			return failure;
 		}
 
 	}
@@ -68,7 +68,7 @@ public class SchedulerService implements ISchedulerService {
 		if (!(p.getName().equals("repeat"))) {
 			return playerRepo.save(p);
 		} else {
-			return FAILURE;
+			return failure;
 		}
 	}
 
@@ -100,7 +100,7 @@ public class SchedulerService implements ISchedulerService {
 		if (!(d.getName().equals("repeat"))) {
 			return dayRepo.save(d);
 		} else {
-			return FAILURE;
+			return failure;
 		}
 	}
 
