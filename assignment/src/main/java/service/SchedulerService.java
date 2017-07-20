@@ -14,6 +14,7 @@ public class SchedulerService implements ISchedulerService {
 	public static final String failure = "failure";
 
 	public SchedulerService() {
+		super();
 	}
 
 	public SchedulerService(GameRepo gameRepo, PlayerRepo playerRepo, DayRepo dayRepo) {

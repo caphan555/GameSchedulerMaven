@@ -11,7 +11,9 @@ import repo.PlayerRepo;
 import service.SchedulerService;
 
 public class Main {
-
+	private static String reportStructure = "==========================================";
+	private static String endReportMsg = "END OF REPORT";
+	
 	public static void main(String[] args) {
 		GameRepo gameRepo = new GameRepo(new Game[5]);
 		DayRepo dayRepo = new DayRepo(new Day[5]);
@@ -35,45 +37,45 @@ public class Main {
 			String gameName = sc.nextLine();
 			StringBuffer gameWiseResult = ss.gameWiseReport(gameName);
 			
-			System.out.println("==========================================");
+			System.out.println(reportStructure);
 			System.out.println("GAME WISE REPORT");
-			System.out.println("==========================================");
+			System.out.println(reportStructure);
 			
 			System.out.print(gameWiseResult.toString());
 			
-			System.out.println("==========================================");
-			System.out.println("END OF REPORT");
-			System.out.println("==========================================");
+			System.out.println(reportStructure);
+			System.out.println(endReportMsg);
+			System.out.println(reportStructure);
 		} else if (action.equals("2")) {
 			System.out.print("Enter name of player: ");
 			String playerName = sc.nextLine();
 			System.out.println("PLayer name: " + playerName);
 			StringBuffer playerWiseResult = ss.playerWiseReport(playerName);
 			
-			System.out.println("==========================================");
+			System.out.println(reportStructure);
 			System.out.println("PLAYER WISE REPORT");
-			System.out.println("==========================================");
+			System.out.println(reportStructure);
 			
 			System.out.print(playerWiseResult.toString());
 			
-			System.out.println("==========================================");
-			System.out.println("END OF REPORT");
-			System.out.println("==========================================");
+			System.out.println(reportStructure);
+			System.out.println(endReportMsg);
+			System.out.println(reportStructure);
 		} else if (action.equals("3")) {
 			System.out.print("Enter name of day: ");
 			String dayName = sc.nextLine();
 			StringBuffer dayWiseResult = ss.dayWiseReport(dayName);
 			
-			System.out.println("==========================================");
+			System.out.println(reportStructure);
 			System.out.println("DAY WISE REPORT");
-			System.out.println("==========================================");
+			System.out.println(reportStructure);
 			
 			System.out.print(dayWiseResult.toString());
 			
 			
-			System.out.println("==========================================");
-			System.out.println("END OF REPORT");
-			System.out.println("==========================================");
+			System.out.println(reportStructure);
+			System.out.println(endReportMsg);
+			System.out.println(reportStructure);
 		}
 		
 	}
