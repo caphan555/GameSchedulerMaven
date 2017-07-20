@@ -5,7 +5,7 @@ import pojo.Game;
 
 public class DayRepo implements IDayRepo {
 	private Day[] days;
-	
+	private static String SUCCESS = "success";
 	
 	
 	public DayRepo(Day[] days) {
@@ -28,7 +28,7 @@ public class DayRepo implements IDayRepo {
 			newDays[--newDaySize] = d;
 			this.setDays(newDays);
 
-			return "success";
+			return SUCCESS;
 		} else {
 			for (int i = 0; i < days.length; i++) {
 				if (days[i] != null) {
@@ -36,11 +36,11 @@ public class DayRepo implements IDayRepo {
 				} else {
 				
 					days[i] = d;
-					return "success";
+					return SUCCESS;
 				}
 			}
 		}
-		return "success";
+		return SUCCESS;
 	}
 	
 	public Day findOne(String name) {

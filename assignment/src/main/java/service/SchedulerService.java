@@ -11,6 +11,7 @@ public class SchedulerService implements ISchedulerService {
 	private GameRepo gameRepo;
 	private PlayerRepo playerRepo;
 	private DayRepo dayRepo;
+	public static final String FAILURE = "failure";
 
 	public SchedulerService() {
 	}
@@ -33,8 +34,7 @@ public class SchedulerService implements ISchedulerService {
 		if (!(game.getName().equals("repeat"))) {
 			return gameRepo.save(g);
 		} else {
-			//System.out.println("never come here??");
-			return "failure";
+			return FAILURE;
 		}
 
 	}
@@ -68,8 +68,7 @@ public class SchedulerService implements ISchedulerService {
 		if (!(p.getName().equals("repeat"))) {
 			return playerRepo.save(p);
 		} else {
-			//System.out.println("never come here??");
-			return "failure";
+			return FAILURE;
 		}
 	}
 
@@ -101,8 +100,7 @@ public class SchedulerService implements ISchedulerService {
 		if (!(d.getName().equals("repeat"))) {
 			return dayRepo.save(d);
 		} else {
-			//System.out.println("never come here??");
-			return "failure";
+			return FAILURE;
 		}
 	}
 
@@ -120,8 +118,7 @@ public class SchedulerService implements ISchedulerService {
 			Game[] testGames = testDays[t].getGames();
 
 			for (int a = 0; a < testGames.length; a++) {
-				//System.out.println("presence games:");
-				//System.out.println(testGames[a].getName() + "  " + gameName);
+
 				if (testGames[a].getName().equals(gameName)) {
 					presenceOfGame = 1;
 				}

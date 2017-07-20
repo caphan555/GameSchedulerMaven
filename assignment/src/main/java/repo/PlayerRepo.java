@@ -5,6 +5,7 @@ import pojo.Player;
 
 public class PlayerRepo implements IPlayerRepo {
 	private Player[] players;
+	private static String SUCCESS = "success";
 	
 	
 	public PlayerRepo(Player[] players) {
@@ -26,18 +27,18 @@ public class PlayerRepo implements IPlayerRepo {
 			newPlayers[--newPlayerSize] = p;
 			this.setPlayers(newPlayers);
 	
-			return "success";
+			return SUCCESS;
 		} else {
 			for (int i = 0; i < players.length; i++) {
 				if (players[i] != null) {
 					continue;
 				} else {
 					players[i] = p;
-					return "success";
+					return SUCCESS;
 				}
 			}
 		}
-		return "success";
+		return SUCCESS;
 	}
 	
 	public Player findOne(String name) {

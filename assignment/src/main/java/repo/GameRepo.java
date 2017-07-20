@@ -4,7 +4,7 @@ import pojo.Game;
 
 public class GameRepo implements IGameRepo {
 	private Game[] games;
-
+	private static String SUCCESS = "success";
 	
 
 	public GameRepo(Game[] games) {
@@ -26,18 +26,18 @@ public class GameRepo implements IGameRepo {
 			newGames[--newGameSize] = g;
 			this.setGames(newGames);
 
-			return "success";
+			return SUCCESS;
 		} else {
 			for (int i = 0; i < games.length; i++) {
 				if (games[i] != null) {
 					continue;
 				} else {
 					games[i] = g;
-					return "success";
+					return SUCCESS;
 				}
 			}
 		}
-		return "success";
+		return SUCCESS;
 	
 	}
 	
