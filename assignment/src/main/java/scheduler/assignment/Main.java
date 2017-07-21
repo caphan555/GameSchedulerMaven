@@ -35,7 +35,7 @@ public class Main {
 		if (action.equals("1")) {
 			System.out.print("Enter name of game: ");
 			String gameName = sc.nextLine();
-			StringBuffer gameWiseResult = ss.gameWiseReport(gameName);
+			StringBuilder gameWiseResult = ss.gameWiseReport(gameName);
 			
 			System.out.println(reportStructure);
 			System.out.println("GAME WISE REPORT");
@@ -50,7 +50,7 @@ public class Main {
 			System.out.print("Enter name of player: ");
 			String playerName = sc.nextLine();
 			System.out.println("PLayer name: " + playerName);
-			StringBuffer playerWiseResult = ss.playerWiseReport(playerName);
+			StringBuilder playerWiseResult = ss.playerWiseReport(playerName);
 			
 			System.out.println(reportStructure);
 			System.out.println("PLAYER WISE REPORT");
@@ -64,7 +64,7 @@ public class Main {
 		} else if (action.equals("3")) {
 			System.out.print("Enter name of day: ");
 			String dayName = sc.nextLine();
-			StringBuffer dayWiseResult = ss.dayWiseReport(dayName);
+			StringBuilder dayWiseResult = ss.dayWiseReport(dayName);
 			
 			System.out.println(reportStructure);
 			System.out.println("DAY WISE REPORT");

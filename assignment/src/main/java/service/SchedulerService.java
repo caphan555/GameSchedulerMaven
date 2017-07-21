@@ -105,10 +105,10 @@ public class SchedulerService implements ISchedulerService {
 		}
 	}
 
-	public StringBuffer gameWiseReport(String gameName) {
+	public StringBuilder gameWiseReport(String gameName) {
 
 		int presenceOfGame = 0;
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 
 		if (gameName.equals("")) {
 			return sb.append("Game Name provided cannot be an empty String!");
@@ -166,9 +166,9 @@ public class SchedulerService implements ISchedulerService {
 		return sb;
 	}
 
-	public StringBuffer playerWiseReport(String playerName) {
+	public StringBuilder playerWiseReport(String playerName) {
 
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		
 		if(playerName.equals("")) {
 			return sb.append("Player Name provided cannot be an empty String!");
@@ -223,9 +223,9 @@ public class SchedulerService implements ISchedulerService {
 		return sb;
 	}
 
-	public StringBuffer dayWiseReport(String dayName) {
+	public StringBuilder dayWiseReport(String dayName) {
 		
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		int presenceOfDays = 0;
 		Day[] days = dayRepo.getDays();
 		
