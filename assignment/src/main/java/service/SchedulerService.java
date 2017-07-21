@@ -27,12 +27,12 @@ public class SchedulerService implements ISchedulerService {
 		Game game = gameRepo.findOne(g.getName());
 		if (g.getName() == null) {
 			return "A null game cannot be created!";
-		} else if (g.getName().equals("")) {
+		} else if ("".equals(g.getName())) {
 			return "Game name cannot be an empty String!";
 		} else if (g.getNoOfPlayers() == 0) {
 			return "Number of players cannot be zero!";
 		}
-		if (!(game.getName().equals("repeat"))) {
+		if (!("repeat".equals(game.getName()))) {
 			return gameRepo.save(g);
 		} else {
 			return failure;
@@ -44,9 +44,9 @@ public class SchedulerService implements ISchedulerService {
 
 		if (p.getName() == null) {
 			return "A null player cannot be created";
-		} else if (p.getName().equals("")) {
+		} else if ("".equals(p.getName())) {
 			return "Player name cannot be empty!";
-		} else if (playerRepo.findOne(p.getName()).getName().equals("repeat")) {
+		} else if ("repeat".equals(playerRepo.findOne(p.getName()).getName())) {
 			return "Player has already been added to the system!";
 		}
 
@@ -77,9 +77,9 @@ public class SchedulerService implements ISchedulerService {
 
 		if (d.getName() == null) {
 			return "A null day cannot be created";
-		} else if (d.getName().equals("")) {
+		} else if ("".equals(d.getName())) {
 			return "Day name cannot be empty!";
-		} else if (dayRepo.findOne(d.getName()).getName().equals("repeat")) {
+		} else if ("repeat".equals(dayRepo.findOne(d.getName()).getName())) {
 			return "Day has already been added to the system!";
 		}
 		Game[] games = d.getGames();

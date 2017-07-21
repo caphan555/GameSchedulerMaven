@@ -32,7 +32,7 @@ public class Main {
 
 		String action = sc.nextLine();
 
-		if (action.equals("1")) {
+		if ("1".equals(action)) {
 			System.out.print("Enter name of game: ");
 			String gameName = sc.nextLine();
 			StringBuilder gameWiseResult = ss.gameWiseReport(gameName);
@@ -46,7 +46,7 @@ public class Main {
 			System.out.println(reportStructure);
 			System.out.println(endReportMsg);
 			System.out.println(reportStructure);
-		} else if (action.equals("2")) {
+		} else if ("2".equals(action)) {
 			System.out.print("Enter name of player: ");
 			String playerName = sc.nextLine();
 			System.out.println("PLayer name: " + playerName);
@@ -61,7 +61,7 @@ public class Main {
 			System.out.println(reportStructure);
 			System.out.println(endReportMsg);
 			System.out.println(reportStructure);
-		} else if (action.equals("3")) {
+		} else if ("3".equals(action)) {
 			System.out.print("Enter name of day: ");
 			String dayName = sc.nextLine();
 			StringBuilder dayWiseResult = ss.dayWiseReport(dayName);
